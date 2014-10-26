@@ -1,0 +1,99 @@
+﻿@model SC.Service.Data.Model.Entities.EventEntity
+
+@{
+    string action = Model != null && Model.Id > 0 ? "Edit" : "Create";
+    ViewBag.Title = action + " Event";
+}
+
+<h2>@action Event</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(false)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Details, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Details, new { @class = "form-control", id="entity-details" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FacebookEventId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.FacebookEventId, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.StartDate, new { @class = "form-control event-start-date" })
+            </div>
+            <div class="col-md-2">
+                dd.MM.yyyy HH:mm:ss
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.EndDate, new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                dd.MM.yyyy HH:mm:ss
+            </div>
+        </div>
+
+        @Html.HiddenFor(q => q.Id)
+        @Html.HiddenFor(q => q.CreatedBy)
+        @Html.HiddenFor(q => q.CreatedOn)
+        @Html.HiddenFor(q => q.UpdatedBy)
+        @Html.HiddenFor(q => q.UpdatedOn)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@action" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+    
+<script src="/Content/ckeditor/ckeditor.js"></script>
+<script src="/Content/ckeditor/adapters/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#entity-details").ckeditor();
+
+        });
+    </script>
+
+}

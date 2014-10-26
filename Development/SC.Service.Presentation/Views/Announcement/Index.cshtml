@@ -1,0 +1,47 @@
+﻿@model SC.Service.Presentation.Models.ListingViewModel<SC.Service.Data.Model.Entities.AnnouncementEntity>
+
+@{
+    ViewBag.Title = "Announcements";
+}
+
+<h2>Announcements</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddEdit")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Created On
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Data) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "AddEdit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "button-delete" })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.Partial("_Paging", Model.Paging)

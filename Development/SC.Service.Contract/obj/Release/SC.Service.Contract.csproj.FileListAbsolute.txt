@@ -1,0 +1,4 @@
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\bin\Release\SC.Service.Contract.dll
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\bin\Release\SC.Service.Contract.pdb
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\obj\Release\SC.Service.Contract.dll
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\obj\Release\SC.Service.Contract.pdb

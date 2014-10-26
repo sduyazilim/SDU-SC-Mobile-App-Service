@@ -1,0 +1,5 @@
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\bin\Debug\SC.Service.Contract.dll
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\bin\Debug\SC.Service.Contract.pdb
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\obj\Debug\SC.Service.Contract.csprojResolveAssemblyReference.cache
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\obj\Debug\SC.Service.Contract.dll
+C:\Users\Burak\Google Drive\Projects\SduService\SDU Software Community Service\SC.Service.Contract\obj\Debug\SC.Service.Contract.pdb
